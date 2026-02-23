@@ -16,26 +16,26 @@
 
   const projects = [
     {
-      title: 'Personal Dashboard',
-      description: 'A responsive dashboard built with Svelte — widgets, persistence and small UX details.',
+      title: 'Project 1',
+      description: 'description 1.',
       tags: ['Svelte', 'Vite', 'CSS'],
       link: '#'
     },
     {
-      title: 'Static Blog Theme',
-      description: 'Minimal, readable static blog theme focused on performance and accessibility.',
-      tags: ['HTML', 'CSS', 'Accessibility'],
+      title: 'Project 2',
+      description: 'a short description of the project.',
+      tags: ['HTML', 'more tags', 'Accessibility'],
       link: '#'
     },
     {
-      title: 'Chatbot Integrations',
-      description: 'Small automation and integrations for messaging platforms.',
-      tags: ['Node', 'APIs', 'Automation'],
+      title: 'Project 3',
+      description: 'desc',
+      tags: ['Node', 'APIs', 'some tag goes here'],
       link: '#'
     },
     {
-      title: 'Open‑source Tooling',
-      description: 'Tools and contributors-focused work: tests, docs, and DX improvements.',
+      title: 'Project 4',
+      description: 'description 4',
       tags: ['Open Source', 'Tests', 'CI'],
       link: '#'
     }
