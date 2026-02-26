@@ -2,6 +2,8 @@
   import { onMount } from 'svelte'
   import Nav from './lib/Nav.svelte'
   import ProjectCard from './lib/ProjectCard.svelte'
+  import FallingParticles from './lib/FallingParticles.svelte'
+
   // FontAwesome imports
   import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
   import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -16,31 +18,36 @@
 
   const projects = [
     {
-      title: 'Project 1',
-      description: 'description 1.',
-      tags: ['Svelte', 'Vite', 'CSS'],
-      link: '#'
+      title: 'Appointment Scheduler',
+      description: 'Scheduling application for a consulting company. Manages contacts, customers, and appointments. Connects to a backend database.',
+      tags: ['Java', 'MySQL', 'IntelliJ', 'OOP', 'JavaFX'],
+      link: 'https://github.com/jacobmcazure/Appointment-Scheduler'
     },
     {
-      title: 'Project 2',
-      description: 'a short description of the project.',
-      tags: ['HTML', 'more tags', 'Accessibility'],
-      link: '#'
+      title: 'Diabetes Health Indicator',
+      description: 'Machine Learning model that classifies patients by predicting whether a patient is non-diabetic or is prediabetic/has diabetes.',
+      tags: ['Python', 'Jupyter Notebook', 'Machine Learning', 'NumPy', 'Pandas', 'Matplotlib', 'Scikit-learn', 'Anaconda'],
+      link: 'https://github.com/jacobmcazure/Diabetes-Health-Indicators'
     },
     {
-      title: 'Project 3',
-      description: 'desc',
-      tags: ['Node', 'APIs', 'some tag goes here'],
-      link: '#'
+      title: 'Package Delivery Truck Router',
+      description: 'Calculates routes for delivery trucks. Uses a variant of Dijkstra\'s algorithm done by hand.',
+      tags: ['Python', 'PyCharm', 'Flask'],
+      link: 'https://github.com/jacobmcazure/Package-Delivery'
     },
     {
-      title: 'Project 4',
-      description: 'description 4',
-      tags: ['Open Source', 'Tests', 'CI'],
-      link: '#'
+      title: 'Inventory Management System',
+      description: 'Application that manages inventory for a small business.',
+      tags: ['Java', 'OOP', 'IntelliJ'],
+      link: 'https://github.com/jacobmcazure/Inventory-Manager'
     }
   ]
-
+  
+  // --- Intersection Observer for fade-in on scroll ---
+  // when an element enters the viewport, add an "in-view" class that adds css transition effects, then unobserve it so it only triggers once.
+  // threshold: trigger when that amount of the element becomes visible.
+  // adds "in-view" class and never removes it so the transition stays with the element after the first time.
+  // we just unobserve it so it does not trigger after every time it enters the viewport (since the class is already applied).
   onMount(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -70,6 +77,7 @@
 <Nav />
 
 <main id="app">
+  <FallingParticles />
   <section id="home" class="hero section">
     <div class="hero-inner container">
       <div>
@@ -132,7 +140,7 @@
   </section>
 
   <footer class="site-footer">
-    <div class="container">© {new Date().getFullYear()} Jacob McEwen · Built with Svelte + Vite</div>
+    <div class="container">© {new Date().getFullYear()} Jacob McEwen</div>
   </footer>
 </main>
 
@@ -212,5 +220,6 @@
     padding: 2px 8px;
     pointer-events: none;
     opacity: 0.92;
+    transition: opacity 0.5s ease-in-out; 
   }
 </style>
