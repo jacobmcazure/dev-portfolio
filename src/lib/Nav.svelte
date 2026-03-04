@@ -25,8 +25,7 @@
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
+      <a href="/public/Resume-Jacob-McEwen.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
 
       <button class="theme-toggle" aria-pressed={theme === 'light'} title="Toggle theme" on:click={toggleTheme}>
         {#if theme === 'light'}

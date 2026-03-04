@@ -20,7 +20,7 @@
     {
       title: 'Appointment Scheduler',
       description: 'Scheduling application for a consulting company. Manages contacts, customers, and appointments. Connects to a backend database.',
-      tags: ['Java', 'MySQL', 'IntelliJ', 'OOP', 'JavaFX'],
+      tags: ['Java', 'MySQL', 'IntelliJ', 'OOP', 'MVC', 'JavaFX'],
       link: 'https://github.com/jacobmcazure/Appointment-Scheduler'
     },
     {
@@ -38,16 +38,17 @@
     {
       title: 'Inventory Management System',
       description: 'Application that manages inventory for a small business.',
-      tags: ['Java', 'OOP', 'IntelliJ'],
+      tags: ['Java', 'OOP', 'IntelliJ', 'MVC'],
       link: 'https://github.com/jacobmcazure/Inventory-Manager'
     }
   ]
   
-  // --- Intersection Observer for fade-in on scroll ---
-  // when an element enters the viewport, add an "in-view" class that adds css transition effects, then unobserve it so it only triggers once.
-  // threshold: trigger when that amount of the element becomes visible.
-  // adds "in-view" class and never removes it so the transition stays with the element after the first time.
-  // we just unobserve it so it does not trigger after every time it enters the viewport (since the class is already applied).
+  /***  Intersection Observer for fade-in on scroll 
+  * when an element enters the viewport, add an "in-view" class that adds css transition effects, then unobserve it so it only triggers once.
+  * threshold: trigger when that amount of the element becomes visible.
+  * adds "in-view" class and never removes it so the transition stays with the element after the first time.
+  * we just unobserve it so it does not trigger after every time it enters the viewport (since the class is already applied).
+  */
   onMount(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -110,7 +111,10 @@
   <section id="about" class="section">
     <div class="container">
       <h2>About</h2>
-      <p>26 yr old full‑stack developer from the United States.</p>
+      <p>A 26 yr old full‑stack developer from the United States. I mainly work on ASP.NET with javascript and C#, however in my free time,
+        I have recently been enjoying Python and C++. I have been set a goal to contribute to more open source projects this year to
+        improve myself as an engineer and give back to the community that runs the software I love using every day.
+      </p>
     </div>
   </section>
 
@@ -125,18 +129,16 @@
     </div>
   </section>
 
-  <section id="resume" class="section">
+  <section id="books" class="section">
     <div class="container">
-      <h2>Resume</h2>
-      <p>Download a PDF or email me for a tailored copy — <a href="mailto:jacobmcewen7@gmail.com">jacobmcewen7@gmail.com</a>.</p>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>If you'd like to work together, say hello: <a href="mailto:jacobmcewen7@gmail.com">jacobmcewen7@gmail.com</a></p>
-    </div>
+      <h2>Booklist</h2>
+      <p>A collection of computer science books that I am making my way through in my free time!</p>
+      <ul>
+        <li><a href="https://www.goodreads.com/book/show/23463279-designing-data-intensive-applications" target="_blank" rel="noopener">Designing Data-Intensive Applications</a> by Martin Kleppmann (Finished)</li>
+        <li><a href="https://www.goodreads.com/book/show/17374825-operating-systems" target="_blank" rel="noopener">Operating Systems</a> by Remzi & Andrea Arpaci-Dusseau (67% done)</li>
+        <li><a href="https://www.goodreads.com/book/show/9407722-dependency-injection-in-net" target="_blank" rel="noopener">Dependency Injection in .NET</a> by Mark Seemann (10% done)</li>
+      </ul>
+      </div>
   </section>
 
   <footer class="site-footer">
@@ -144,6 +146,7 @@
   </footer>
 </main>
 
+<!-- Popup -->
 {#if showOutside}
   <div class="overlay" role="dialog" aria-modal="true">
     <div class="modal" transition:scale={{ duration: 220, start: 0.96 }}>
@@ -152,15 +155,11 @@
         have built a structured routine and found many things I enjoy in my free time.
       </p>
       <p>
-        These include boxing, reading, language learning, meditation, and playing guitar. I am very proud of my journey to this point in my life while
-        simultaneously realizing there is so much more still out there.
+        These include boxing, reading, language learning, meditation, and playing guitar.
       </p>
       <p>
         I wish that anyone reading this may one day feel a similar feeling of
         accomplishment, confidence, and joy in their own life, whatever that may look like for them.
-      </p>
-      <p>
-        You are capable of more thank you think.
       </p>
       <p>
         <i>"If you think something is impossible, you'll only make it impossible." - Bruce Lee</i>

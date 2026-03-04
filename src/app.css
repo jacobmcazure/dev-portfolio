@@ -24,8 +24,19 @@
   --shadow: 0 8px 30px rgba(2,6,23,0.06);
 }
 
+/* include padding, border, etc. in width and height calcluation */
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+
+/* hide those ugly default scrollbars and smooth the navigation out */
+html { 
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+ }
+html::-webkit-scrollbar { 
+  display: none;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -152,12 +163,13 @@ a:hover {
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(100,108,255,0.18); 
   border: none; 
+  cursor: pointer;
 }
 .ghost {
    background: transparent; 
    border: 1px solid rgba(255,255,255,0.06); 
    color: var(--text); 
-   padding: 9px 14px; 
+   padding: 10px 16px; 
    border-radius: 10px; 
    cursor: pointer; 
   }
