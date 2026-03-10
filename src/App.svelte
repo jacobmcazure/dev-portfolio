@@ -151,11 +151,10 @@
   <div class="overlay" role="dialog" aria-modal="true">
     <div class="modal" transition:scale={{ duration: 220, start: 0.96 }}>
       <h3>My Life Outside of code</h3>
-      <p>I have been developing myself as a person for the past few years, and along the way, 
-        have built a structured routine and found many things I enjoy in my free time.
+      <p>Recently I have built a structured routine and found many things I enjoy in my free time.
       </p>
       <p>
-        These include boxing, reading, language learning, meditation, and playing guitar.
+        These include boxing, playing soccer, reading, language learning, meditation, and playing guitar.
       </p>
       <p>
         I wish that anyone reading this may one day feel a similar feeling of
