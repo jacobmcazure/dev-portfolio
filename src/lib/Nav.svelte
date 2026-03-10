@@ -11,10 +11,16 @@
   })
 
   function toggleTheme() {
-    theme = theme === 'dark' ? 'light' : 'dark'
+    theme = theme === 'light' ? 'dark' : 'light'
     document.documentElement.classList.toggle('light', theme === 'light')
     localStorage.setItem('theme', theme)
   }
+
+  onMount(() => {
+    const stored = localStorage.getItem('theme') || 'dark'
+    theme = stored
+    document.documentElement.classList.toggle('light', theme === 'light')
+  })
 </script>
 
 <header class="navbar">
